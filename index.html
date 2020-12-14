@@ -18,7 +18,7 @@
         y: null,
         width: 5,
         height: 5,
-        speed: 4,
+        speed: 2,
         dx: null,
         dy: null,
 
@@ -108,6 +108,7 @@
 
         if(collide(ball, paddle)) {
           ball.dy *= -1;
+          ball.y = paddle.y - ball.height
         }
 
         block.data.forEach((brick, index) => {
